@@ -3,7 +3,6 @@ import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
-// import logo from "./logo.svg";
 
 const App = () => {
   return (
