@@ -3,25 +3,12 @@ import DailogItem from "./DailogItem/DailogItem";
 import Message from "./Message/Message";
 import s from "./Dialogs.module.css";
 
-const Dialogs = () => {
-  let dialogs = [
-    { id: 1, name: "Jon" },
-    { id: 2, name: "Ben" },
-    { id: 3, name: "Sara" },
-    { id: 4, name: "Anna" },
-    { id: 5, name: "Den" },
-  ];
+const Dialogs = (props) => {
 
-  let messages = [
-    { id: 1, message: "Hi" },
-    { id: 2, message: "How are you?" },
-    { id: 3, message: "Good!" },
-  ];
-
-  let dialogsElements = dialogs.map((d) => (
+  let dialogsElements = props.dialogs.map((d) => (
     <DailogItem name={d.name} id={d.id} />
   ));
-  let messagesElements = messages.map((m) => <Message text={m.message} />);
+  let messagesElements = props.messages.map((m) => <Message text={m.message} />);
 
   return (
     <div>
