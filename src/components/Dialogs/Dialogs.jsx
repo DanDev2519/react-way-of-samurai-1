@@ -10,12 +10,21 @@ const Dialogs = (props) => {
   ));
   let messagesElements = props.state.messages.map((m) => <Message text={m.message} />);
 
+  let newMessageElement = React.createRef();
+  let writeNewMessage = () => {
+    let textMessage = newMessageElement.current.value;
+    alert(`Your new message: ${textMessage}`);
+  };
   return (
     <div>
       <h2>Dialogs</h2>
       <div className={s.dialogs}>
         <div className={s.dialogItems}>{dialogsElements}</div>
-        <div className={s.messages}>{messagesElements}</div>
+        <div>
+          <div className={s.messages}>{messagesElements}</div>
+          <input ref={newMessageElement} type="text" placeholder="Write a message..."></input>
+          <button onClick={writeNewMessage}>Send</button>
+        </div>
       </div>
     </div>
   );
