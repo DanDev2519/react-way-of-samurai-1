@@ -1,16 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 // import reportWebVitals from './reportWebVitals';
 // import state from './redux/state';
-import {addPost, updateNewPostText} from './redux/state';
+import { addPost, updateNewMessageText, updateNewPostText } from "./redux/state";
 
 export let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App state={state} addPost={addPost} updateNewPostText={updateNewPostText}/>
+      <App
+        state={state}
+        addPost={addPost}
+        updateNewPostText={updateNewPostText}
+        updateNewMessageText={updateNewMessageText}
+      />
     </React.StrictMode>,
-    document.getElementById('root')
+    document.getElementById("root")
   );
 };

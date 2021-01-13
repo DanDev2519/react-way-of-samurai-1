@@ -20,7 +20,8 @@ let state = {
       { id: 1, message: "Hi" },
       { id: 2, message: "How are you?" },
       { id: 3, message: "Good!" },
-    ],
+		],
+		newMessageText: "new message text",
   },
 };
 
@@ -37,6 +38,11 @@ export let addPost = () => {
 
 export let updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+
+export let updateNewMessageText = (newText) => {
+  state.dialogsPage.newMessageText = newText;
   rerenderEntireTree(state);
 };
 
