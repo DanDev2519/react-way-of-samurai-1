@@ -27,7 +27,6 @@ const App = (props) => {
               <Profile
                 state={props.state.profilePage}
                 dispatch={props.dispatch}
-                // updateNewPostText={props.updateNewPostText}
               />
             )}
           />
