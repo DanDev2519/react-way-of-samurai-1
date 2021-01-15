@@ -35,7 +35,8 @@ const App = (props) => {
             render={() => (
               <Dialogs
                 state={props.state.dialogsPage}
-                updateNewMessageText={props.updateNewMessageText}
+                dispatch={props.dispatch}
+                // updateNewMessageText={props.updateNewMessageText}
               />
             )}
           />

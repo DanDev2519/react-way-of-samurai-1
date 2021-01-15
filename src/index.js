@@ -11,7 +11,7 @@ let renderEntireTree = (state) => {
       <App
         state={state}
         dispatch={store.dispatch.bind(store)}
-        updateNewMessageText={store.updateNewMessageText.bind(store)}
+        // updateNewMessageText={store.updateNewMessageText.bind(store)}
       />
     </React.StrictMode>,
     document.getElementById("root")
