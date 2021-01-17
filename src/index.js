@@ -4,16 +4,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import StoreContext from "./StoreContext";
 
 let renderEntireTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App
-        store={store}
-        // state={state}
-        // dispatch={store.dispatch.bind(store)}
-        // updateNewMessageText={store.updateNewMessageText.bind(store)}
-      />
+      <StoreContext.Provider value={store}>
+        <App store={store} />
+        {/* При глобальном контексте для дочерних элементов
+        в компоненту можно ничего не передавать */}
+        {/* <App /> */} 
+      </StoreContext.Provider>
     </React.StrictMode>,
     document.getElementById("root")
   );
