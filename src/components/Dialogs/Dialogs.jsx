@@ -2,10 +2,6 @@ import React from "react";
 import DailogItem from "./DailogItem/DailogItem";
 import Message from "./Message/Message";
 import s from "./Dialogs.module.css";
-import {
-  addMessageActionCreater,
-  updateNewMessageActionCreater,
-} from "./../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
   let dialogsElements = props.state.dialogs.map((d) => (
@@ -15,13 +11,13 @@ const Dialogs = (props) => {
     <Message text={m.message} />
   ));
 
-  let writeNewMessage = () => {
-    props.dispatch(addMessageActionCreater());
+  let addNewMessage = () => {
+    props.addMessage();
   };
 
   let oninputChange = (evt) => {
     let text = evt.target.value;
-    props.dispatch(updateNewMessageActionCreater(text));
+    props.updateNewMessageText(text);
   };
 
   return (
@@ -37,7 +33,7 @@ const Dialogs = (props) => {
             type="text"
             placeholder="Write a message..."
           ></input>
-          <button onClick={writeNewMessage}>Send</button>
+          <button onClick={addNewMessage}>Send</button>
         </div>
       </div>
     </div>
