@@ -4,10 +4,10 @@ import Message from "./Message/Message";
 import s from "./Dialogs.module.css";
 
 const Dialogs = (props) => {
-  let dialogsElements = props.state.dialogs.map((d) => (
+  let dialogsElements = props.dialogsPage.dialogs.map((d) => (
     <DailogItem name={d.name} id={d.id} />
   ));
-  let messagesElements = props.state.messages.map((m) => (
+  let messagesElements = props.dialogsPage.messages.map((m) => (
     <Message text={m.message} />
   ));
 
@@ -29,7 +29,7 @@ const Dialogs = (props) => {
           <div className={s.messages}>{messagesElements}</div>
           <input
             onChange={oninputChange}
-            value={props.state.newMessageText}
+            value={props.dialogsPage.newMessageText}
             type="text"
             placeholder="Write a message..."
           ></input>
