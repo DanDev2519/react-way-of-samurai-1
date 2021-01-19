@@ -9,6 +9,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import News from "./components/News/News";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 const App = (props) => {
   return (
@@ -17,28 +18,12 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className="app__content">
-          {/* <Route path="/Profile" component={Profile} />
-          <Route path="/Dialogs" component={Dialogs} />
-          <Route path="/News" component={News} />
-          <Route path="/Music" component={Music} />
-          <Route path="/Settings" component={Settings} /> */}
-          <Route
-            path="/Profile"
-            // render={() => <Profile store={props.store} />}
-            render={() => <Profile />}
-          />
+          <Route path="/Profile" render={() => <Profile />} />
           <Route
             path="/Dialogs"
-            render={() => (
-              <DialogsContainer store={props.store}/>
-              // <Dialogs
-              //   store={props.store}
-              //   // state={props.state.dialogsPage}
-              //   // dispatch={props.dispatch}
-              //   // updateNewMessageText={props.updateNewMessageText}
-              // />
-            )}
+            render={() => <DialogsContainer store={props.store} />}
           />
+          <Route path="/Users" render={() => <UsersContainer />} />
           <Route path="/News" render={() => <News />} />
           <Route path="/Music" render={() => <Music />} />
           <Route path="/Settings" render={() => <Settings />} />
