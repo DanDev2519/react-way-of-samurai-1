@@ -1,3 +1,19 @@
+.breadCrumbs {
+	display: flex;
+	flex-wrap: wrap;
+
+	list-style: none;
+}
+
+.crumb {
+	padding: 0 2px;
+	cursor: pointer;
+}
+
+.currentCrumb {
+	font-weight: bold;
+}
+
 .ava {
 	width: 60px;
 	height: 60px;
