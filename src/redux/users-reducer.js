@@ -40,9 +40,8 @@ let initialState = {
     //   location: { country: "Ukraine", city: "Kiev" },
     // },
   ],
-  pageSize: 4,
-  // totalUsersCount: 0,
-  totalUsersCount: 10,
+  pageSize: 5,
+  totalUsersCount: 0,
   currentPage: 1,
   isFetching: false,
 };
