@@ -3,10 +3,19 @@
   background-color: lime;
 }
 
-.item {
-  color: white;
+ul {
+  padding: 20px;
 }
 
-.item.active {
+.item {
+  list-style: none;
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+}
+
+a.active {
     color: goldenrod;
   }

@@ -16,6 +16,11 @@ body {
   grid-gap: 10px;
 }
 
+.app__content {
+  grid-area: c;
+  background-color: lightgoldenrodyellow;
+}
+
 /* 
 .App {
   text-align: center;

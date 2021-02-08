@@ -1,23 +1,20 @@
 import React from "react";
-import MyPosts from "./MyPosts/MyPosts";
-import s from "./Profile.module.css";
+// import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
+// import s from "./Profile.module.css";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
-    <div className={s.content}>
-      <img
-        className={s.content__img}
-        src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg"
-        alt="top"
-      />
-      <div>
-        <img
-          className={s.content__img}
-          scr="https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg"
-          alt="avatar"
-        />
-      </div>
-      <MyPosts />
+    <div>
+      <ProfileInfo />
+      {/* <MyPostsContainer store={props.store}/> */}
+      <MyPostsContainer />
+      {/* <MyPosts
+        posts={props.state.posts}
+        newPostText={props.state.newPostText}
+        dispatch={props.dispatch}
+      /> */}
     </div>
   );
 };
